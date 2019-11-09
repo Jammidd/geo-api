@@ -6,8 +6,6 @@
 
 Geo API is an open source API for querying geographical data. All data is sourced from open source providers.
 
-Please email support@nomadicode.com if you find any bugs.
-
 ## Getting started
 You have two options to get started using the Geo API. 
 

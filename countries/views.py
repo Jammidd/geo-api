@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from rest_framework.viewsets import ReadOnlyModelViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet, generics
 from rest_framework.response import Response
 
 from countries.models import Country
@@ -22,3 +22,11 @@ class CountryViewSet(ReadOnlyModelViewSet):
 
         serializer = CountrySerializer(country)
         return Response(serializer.data)
+
+
+class CountriesByContinentViewSet(generics.ListAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+
+    def get_queryset(self):
+        continent_pk = self.kwargs['']

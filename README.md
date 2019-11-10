@@ -64,7 +64,22 @@ Nomadicode maintains https://geo.nomadicode.com. The API contains the latest app
 ```
 
 ##### Regions
-> Coming soon
+**_Response format_**
+```
+{
+    id: uuid,
+    name: string,
+    code: string (2 chars),
+    country: uuid key
+}
+```
+
+**_Endpoints_**
+```
+/regions - Returns a list of all the regions
+/regions/:id - Returns the region matching the provided id
+/countries/(:id|:code)/regions - Returns a list of all regions in the provided country
+```
 
 ##### Cities
 > Coming soon
